@@ -1,0 +1,38 @@
+{
+  "name": "test_agent_supervisor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "watch": "nodemon --exec ts-node src/main.ts",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:full": "./start.sh",
+    "elasticsearch:up": "docker compose up -d",
+    "elasticsearch:down": "docker compose down",
+    "elasticsearch:logs": "docker compose logs -f elasticsearch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.1.1",
+    "@langchain/anthropic": "^0.3.27",
+    "@langchain/aws": "^0.1.15",
+    "@langchain/core": "^0.3.75",
+    "@langchain/langgraph": "^0.4.9",
+    "@langchain/tavily": "^0.1.5",
+    "dotenv": "^17.2.2",
+    "langsmith": "^0.3.67"
+  }
+}
